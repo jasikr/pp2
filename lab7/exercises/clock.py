@@ -14,11 +14,11 @@ win = pygame.display.set_mode((screen_w, screen_h))
 pygame.display.set_caption('Mouse')
 
 
-img_main = pygame.image.load('mouse\\mainclock.png')
+img_main = pygame.image.load('clockk\\mainclock.png')
 img_main = pygame.transform.scale(img_main, (screen_w, screen_h))
-img_left = pygame.image.load('mouse\\leftarm.png')
+img_left = pygame.image.load('clockk\\leftarm.png')
 img_left = pygame.transform.scale(img_left, (45, screen_h))
-img_right = pygame.image.load('mouse\\rightarm.png')
+img_right = pygame.image.load('clockk\\rightarm.png')
 img_right = pygame.transform.scale(img_right, (screen_w, screen_h))
 
 def print_img_by_degree(image, degree): # function for drawing image by given degree
@@ -28,12 +28,12 @@ def print_img_by_degree(image, degree): # function for drawing image by given de
     win.blit(image, rect) # draw image onto win in the position defined by rect
 
 def print_time(): # unnecessary
-    font = pygame.font.Font('mouse\\Alice-Regular.ttf', 40)
+    font = pygame.font.Font('clockk\\Alice-Regular.ttf', 40)
     text = font.render(f'{minute//10}{minute%10}:{second//10}{second%10}', True, (169, 169, 169))
     win.blit(text, (screen_w-100, screen_h-50))
 
 def play_tick(): # unnecessary
-    music = pygame.mixer.music.load('mouse\\clock_6.mp3')
+    music = pygame.mixer.music.load('clockk\\clock_6.mp3')
     pygame.mixer.music.play()
 play_tick()
 
