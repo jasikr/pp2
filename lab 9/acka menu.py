@@ -17,7 +17,7 @@ RED = (255, 0, 0)
 
 # Initialize screen and clock
 screen = pygame.display.set_mode((W, H), pygame.RESIZABLE)
-pygame.display.set_caption("Breakout Game")
+pygame.display.set_caption("Ackanoid")
 clock = pygame.time.Clock()
 
 # Paddle setup
@@ -38,7 +38,7 @@ game_score = 0
 score_font = pygame.font.SysFont('comicsansms', 40)
 
 # Sound
-collision_sound = pygame.mixer.Sound('catch.wav')  # Ensure this sound file is in your project directory
+collision_sound = pygame.mixer.Sound('catch.wav')  
 
 # Menu flags
 main_menu_active = True
@@ -152,7 +152,7 @@ def draw_menu(menu_active, show_settings):
 def handle_main_menu():
     global main_menu_active, pause_menu_active
     title_font = pygame.font.SysFont('comicsansms', 72)
-    title = title_font.render('BREAKOUT GAME', True, WHITE)
+    title = title_font.render('Ackanoid', True, WHITE)
     start_text = score_font.render('Press any key to start', True, WHITE)
 
     while main_menu_active:
